@@ -1,0 +1,22 @@
+<br/> <br/> <br/>
+<div class="wrapper">
+  <div class="row">
+      <div class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-white">
+          <h3 style="margin-top: 20px; text-align: center;">Login</h3>
+
+          <div class="row" style="text-align: center;">
+              Email : <input class="form-control" type="text" name="username" [(ngModel)]="email">
+          </div>
+          <div class="row" style="text-align: center;">
+              Password : <input class="form-control" type="password" name="password" [(ngModel)]="password">
+          </div>
+          <br/>
+          <div class="row mx-auto text-center">
+              <button class="btn btn-primary" (click)=checkLogin() class="logInBtn btn btn-success">
+                Login
+              </button>
+          </div>
+
+      </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div class="wrapper">
+    <div class="row">
+        <div class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-white">
+            <h3 style="margin-top: 20px; font-size: x-large; text-align: center;">Update</h3>
+            <form [formGroup]="userForm" >
+            <div class="row">
+                First Name : <input (blur)="validateName(); enableButton();" class="form-control" type="text" formControlName="firstName" ng-pattern="/^[a-zA-Z'. -]+$/" placeholder="Your First Name">
+                <small *ngIf="nameFlag" style="color: red;">Invalid  Name</small>
+            </div>
+            <div class="row">
+                Last Name : <input (blur)="validateName(); enableButton();" class="form-control" type="text"  formControlName="lastName"ng-pattern="/^[a-zA-Z'. -]+$/" placeholder="Your Last Name">
+                <small *ngIf="nameFlag" style="color: red;">Invalid  Name</small>
+            </div>
+            <div class="row">
+                Password : <input class="form-control" type="password" formControlName="password" 
+                minlength="5" maxlength="50" required>
+            </div>
+            <div class="row">
+                Phone No : <input (blur)="validatePhone(); enableButton();" class="form-control" type="text" formControlName="phoneNo">
+                <small *ngIf="phoneFlag" style="color: red;">Invalid Phone Number</small>
+            </div>
+            <div class="row">
+                Email : <input (blur)="validateEmail(); enableButton();" class="form-control" type="email" formControlName="email">
+                <small *ngIf="emailFlag" style="color: red;">Invalid Email</small>
+            </div>
+            <div class="row">
+                City : <input (blur)="validateName(); enableButton();" class="form-control" type="text" formControlName="city"ng-pattern="/^[a-zA-Z'. -]+$/" >
+                <small *ngIf="nameFlag" style="color: red;">Invalid  City</small>
+            </div>
+            </form>
+            <br/>
+            <div class="row" style="align-content: center;">
+                <button class="regBtn btn btn-success" type="submit" (click)="onSubmit()">
+                    Update
+                  </button>
+            </div>
+        </div>
+    </div>
+  </div>
+  

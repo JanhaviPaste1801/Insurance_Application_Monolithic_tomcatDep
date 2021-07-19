@@ -1,0 +1,76 @@
+<!-- <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2 style="text-align: center;">Available Policies</h2>
+    </div>
+    <br/>
+    <div class=" panel-body ">
+        <table border="1 " class="table table-striped  ">
+            <thead>
+                <tr>
+                    
+                    <th>Policy Name</th>
+                    <th>Policy type</th>
+                    
+                    <th>Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let policy of policies | async ">
+                    
+                    <td>{{policy.policyName}}</td>
+                    <td>{{policy.policyType}}</td>
+                    
+
+                    <td>
+                        <button (click)="policyDetails(policy.policyId) " class="btn btn-info " style="margin-left: 10px ">Know More</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> -->
+
+
+<div class="insurerDetails box-section-mobile">
+    <div class="insurer-bu hideSmall">
+<div class="insurerLogo1">
+<img src="https://static.pbcdn.in/cdn/images/bu/health/health-insurance.png" alt="">
+</div>
+<div class="h1">Get <strong>₹5 Lac</strong> Health Insurance starting <strong>@ ₹315/<span>month*</span></strong></div>
+</div>
+    <div class="insurerFeatures disCTAContent">
+            <div class="features">
+<div class="block clearfix">
+    <i class="icons-bu icon-1"></i>
+    <div class="text">
+        <span>Tax Benefit</span>
+        up to Rs.75,000
+    </div>
+</div>
+
+<div class="block clearfix">
+    <i class="icons-bu icon-2"></i>
+    <div class="text">
+        <span>Save up to 12.5%*</span>
+        on 2 Year Payment Plans
+    </div>
+</div>
+
+<div class="block clearfix">
+    <i class="icons-bu icon-3"></i>
+    <div class="text">
+        <span>7 Lakh+</span>
+        Happy Customers
+    </div>
+</div>
+</div>
+
+
+<p class="disclaimer" style="text-align:left">
+*All savings are provided by the insurer as per the IRDAI approved insurance plan. Standard T&C Apply
+<br/>*Tax benefit is subject to changes in tax laws. Standard T&C Apply
+    
+</p>
+</div>
+</div>

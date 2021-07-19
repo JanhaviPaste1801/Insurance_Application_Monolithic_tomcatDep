@@ -1,0 +1,80 @@
+<!-- <section id="team" class="pb-5">
+    <br>
+    
+    <div class="container">
+        <br>
+        <h4 style="text-align: center;" class="section-title">OUR POLICES</h4><hr>
+
+        <div class="row">
+           
+            <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let policy of policies | async ">
+                <div class="card">
+                    <div class="card-body text-center">
+                     
+                        <h4 class="card-header bg-info">{{policy.policyName}}</h4>
+                        <hr />
+                        <p class="card-text">{{policy.policyType}}</p>
+                        <a class="btn btn-primary btn-sm" (click)="policyDetails(policy.policyId)">Know More</a>
+                        <a class="btn btn-danger btn-sm" style="margin-left: 10px"
+                            (click)="deletePolicy(policy.policyId)">Delete</a>
+                        <a class="btn btn-success btn-sm" style="margin-left: 10px"
+                            (click)="updatePolicy(policy.policyId)">Update</a>
+
+                    </div>
+                </div>
+                
+                <br /><br><br><br><br><br/><br/><br/>
+            </div>
+            
+        </div>
+        <div class="text-center">Want to Include More Policies ? 
+            <button class="btn btn-secondary btn-sm" (click)="add()">Add policy</button>
+        </div>
+    </div>
+</section> -->
+
+
+<section id="team" class="pb-5">
+    <br>
+    
+    <div class="container">
+        <div class="col-xs-6 col-sm-12 col-md-12 form-outline">
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search Policy here">
+            
+        </div>
+        <br>
+        
+
+        <h4 style="text-align: center;" class="section-title"><span>OUR POLICIES</span>
+            <button
+          class="btn btn-warning float-right" id="ExplPlanbtn" (click)="go()">
+            User & Plans</button>
+        </h4><hr>
+
+        <div class="row">
+           
+            <div class="col-xs-6 col-sm-12 col-md-4" *ngFor="let policy of (policies | filter:searchText)">
+                <div class="card">
+                    <div class="card-body text-center">
+                     
+                        <h4 class="card-header bg-info">{{policy.policyName}}</h4>
+                        <hr />
+                        <p class="card-text">{{policy.policyType}}</p>
+                        <a class="btn btn-primary btn-sm" (click)="policyDetails(policy.policyId)">Know More</a>
+                        <a class="btn btn-danger btn-sm" style="margin-left: 10px"
+                            (click)="deletePolicy(policy.policyId)">Delete</a>
+                        <a class="btn btn-success btn-sm" style="margin-left: 10px"
+                            (click)="updatePolicy(policy.policyId)">Update</a>
+
+                    </div>
+                </div>
+                
+               <br/>
+            </div>
+            
+        </div>
+        <div class="text-center">Want to Include More Policies ? 
+            <button class="btn btn-secondary btn-sm" (click)="add()">Add policy</button>
+        </div>
+    </div>
+</section>

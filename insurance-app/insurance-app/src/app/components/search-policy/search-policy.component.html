@@ -1,0 +1,45 @@
+<!-- <div class="content" role="main">
+    <div class="card">
+      <div class="form-group">
+        <label for="search-text">Search Text</label>
+        <input type="text" class="form-control" id="search-text" aria-describedby="search-text" 
+          [(ngModel)]="searchText" placeholder="Enter text to search" 
+          autofocus>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let policy of policies | filter: searchText">
+          {{policy.policyName}}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+   -->
+
+   <div class="container text-center">
+    
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="search-hero">
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="search">
+      </div>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Policy Name</th>
+          <th>Policy Type</th>
+          <th>Duartion</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let policy of (policies | filter:searchText)">
+          <td>{{policy.policyName}}</td>
+          <td>{{policy.policyType}}</td>
+          <td>{{policy.duration}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

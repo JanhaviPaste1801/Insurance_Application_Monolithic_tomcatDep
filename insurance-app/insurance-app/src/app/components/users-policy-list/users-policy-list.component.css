@@ -1,0 +1,24 @@
+.topBanner .container .insurerDetails {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 0;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 12px 0 rgb(37 56 88 / 20%);
+}
+
+.topBanner .container .insurerDetails {
+    margin-top: 45px;
+    float: left;
+    width: 670px;
+    margin-left: 60px;
+}
+
+.box-section-mobile {
+    box-shadow: none!important;
+    border-radius: 1px!important;
+    border-top: solid .8px rgba(23,43,77,.2)!important;
+    border-bottom: solid .8px rgba(23,43,77,.2)!important;
+    margin-top: 30px!important;
+}

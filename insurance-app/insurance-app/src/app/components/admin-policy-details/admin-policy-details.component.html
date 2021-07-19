@@ -1,0 +1,128 @@
+<!-- <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2 style="text-align: center;">Know your plan</h2>
+    </div>
+    <br />
+    <div class=" panel-body ">
+        <table  class="table">
+            <tr>
+                <th>Policy Id</th>
+                <td>{{policy.policyId}}</td>
+            </tr>
+
+            <tr>
+                <th>Policy Name</th>
+                <td>{{policy.policyName}}</td>
+            </tr>
+
+            <tr>
+                <th>Premium Amount</th>
+                <td>{{policy.premiumAmount}}</td>
+            </tr>
+
+            <tr>
+                <th>Policy type</th>
+                <td>{{policy.policyType}}</td>
+            </tr>
+
+            <tr>
+                <th>Duration</th>
+                <td>{{policy.duration}}</td>
+            </tr>
+
+            <tr>
+                <th>Description</th>
+                <td>{{policy.description}}</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <div class="text-center">
+            <button style="align-content: center;" (click)="policyList()" class="btn btn-primary">Back to Policy List</button><br>
+
+        </div>
+
+    </div>
+</div> -->
+
+<section id="team" class="pb-5">
+    <div class="container" style="align-content: center;">
+        <h3 class="section-title" style="text-align: center;">{{policy.policyName}}  Policy</h3>
+        <div class="row" style="align-content: center;"> 
+            <!--  Team member -->
+            <div class="col-xs-12 col-sm-12 col-md-12
+             justify-content-center">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h4 class="card-header bg-info">{{policy.policyName}}</h4><hr/>
+                        <p class="card-text">Type: {{policy.policyType}}</p>
+                        <p class="card-text">Duration (in years) : {{policy.duration}}</p>
+                        <p class="card-text">Starting At : Rs. {{policy.premiumAmount/12}}/month</p>
+                        <p class="card-text">Description : {{policy.description}}</p>
+                    </div>
+                </div><br />
+            </div>
+        </div>
+    </div>
+
+    <section class="coverd-n-not bg-w pb30" id="coverd-n-not">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="covered-head-txt" style="text-align: center;">What is covered in a health insurance policy?</h2>
+                </div>
+                <div class="col-md-4 text-center covered-div"><img
+                        src="assets/regain-green.png" alt="Sum Insured rebound"
+                        title="Sum Insured Rebound" /><br /><br /><b class="covered-head">Sum Insured rebound</b>
+                    <p>This acts like a magical back-up, which recharges your exhausted health cover to treat the next
+                        hospitalization of a new illness or injury.</p>
+                </div>
+                <div class="col-md-4 text-center covered-div"><img
+                        src="assets/big-savings.png" alt="Installment Benefit"
+                        title="Instalment Benefit" /><br /><br /><b class="covered-head">Cumulative Bonus</b>
+                    <p>We reward you with additional sum insured when you do not make claim in a policy year by
+                        increasing your sum insured.</p>
+                </div>
+                <div class="col-md-4 text-center covered-div"><img
+                        src="assets/pre-hospitalization.png"
+                        alt="No Medical Test Upto 45 Years" title="No Medical Test Upto 45 Years" /><br /><br /><b
+                        class="covered-head">No Medical Test Upto 45 Years</b>
+                    <p class="cover-txt">If you are young, hale and hearty then get yourself a health insurance plan by
+                        HDFC ERGO without any medical check-ups.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-center covered-div"><img
+                        src="assets/homehealthicon.png"
+                        alt="Cashless Home Health care**" title="Cashless Home Health care**" /><br /><br /><b
+                        class="covered-head">Cashless Home Health care**</b>
+                    <p class="cover-txt">If your Doctor recommends you can get yourself treated at home and avail
+                        cashless medical facilities then this feature would be of utmost help.</p>
+                </div>
+                <div class="col-md-4 text-center covered-div"><img
+                        src="assets/in-patient-treatment.png"
+                        alt="Hospitalisation expenses" title="Hospitalisation expenses" /><br /><br /><b
+                        class="covered-head">Hospitalization expenses</b>
+                    <p class="cover-txt">Just like every other health insurance plan, we cover you for your medical
+                        hospitalization due to illnesses and injuries seamlessly.</p>
+                </div>
+                <div class="col-md-4 text-center covered-div"><img
+                        src="assets/posthospitalisationicon.png"
+                        alt="Pre & Post Hospitalisation" title="Pre & Post Hospitalisation" /><br /><br /><b
+                        class="covered-head">Pre &amp; Post Hospitalisation </b>
+                    <p class="cover-txt">It means all your pre-hospitalization expenses upto 60 days of admission and
+                        post-discharge expenses till 180 days get covered, like the costs for diagnostics, investigation
+                        etc.</p>
+                </div>
+            </div>
+           
+            
+           
+           
+        </div>
+    </section>
+    <div style="align-content: center;" class = "text-center">   
+         <button style="text-align: center; align-content: center;" class="btn btn-primary btn-lg" (click) = "back()" >Go Back</button>
+    </div>
+
+</section>

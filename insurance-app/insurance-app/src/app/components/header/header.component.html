@@ -1,0 +1,48 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <!-- <a class="navbar-brand" routerLink="/" h1>Bajaj Insurance</a> -->
+      <img src="assets/bajaj1.png" style="max-width:15%;">
+      <ul class="navbar-nav mr-auto">
+        <li *ngIf="isLoggedIn" class="nav-item active">
+          <a class="nav-link btn btn-primary" routerLink="/"
+            >Dashboard</a
+          >
+        </li>
+      </ul>
+
+
+  
+      <ul *ngIf="!authService.isUserLoggedIn()" class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link btn btn-primary" routerLink="/login">Login</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link btn btn-primary" routerLink="/register">Register</a>
+        </li>
+      </ul>
+
+      <!-- <ul *ngIf="!isLoggedOut()" class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link btn btn-primary" routerLink="/login">Logout</a>
+        </li>
+      </ul> -->
+
+
+      <ul *ngIf="authService.isUserLoggedIn()" class="navbar-nav ml-auto">
+        <li class="nav-item active" style="align-content: center; color:darkblue;">
+         <!-- Welcome {{userName}} -->
+
+         <a class="nav-link justify-content-center" >  Welcome {{userName}} </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link btn btn-primary" (click)="profile()"> Profile </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link btn btn-primary" (click)="logout()"> Logout </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+ 
+  

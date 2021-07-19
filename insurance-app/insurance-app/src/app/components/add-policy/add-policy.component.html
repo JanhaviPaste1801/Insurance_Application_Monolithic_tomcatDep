@@ -1,0 +1,56 @@
+<div class="wrapper">
+    <div class="row">
+        <div class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-white">
+            <h3 style="margin-top: 20px; font-size: x-large; text-align: center;">Enter Policy Details</h3>
+            <div class="row">
+                Policy Name : <input (blur)="validateName(); enableButton();" 
+                class="form-control" type="text" name="fname" [(ngModel)]="policy.policyName" 
+                ng-pattern="/^[a-zA-Z'. -]+$/" >
+                <small *ngIf="nameFlag" style="color: red;">Invalid  Name</small>
+            </div>
+
+            <div class="row">
+                Duration : (in years) <input 
+                class="form-control" type="number" name="duration" [(ngModel)]="policy.duration" 
+                ng-pattern="/[0-9]/">
+            </div>
+
+            <div class="row">
+                Amount : <input class="form-control"  type="number" 
+                ng-pattern="/[0-9]/" name="amount" [(ngModel)]="policy.premiumAmount"  required>
+            </div>
+
+            <form [formGroup] = "policyForm">
+                <div class="row">
+                    <label>Policy Type    :</label>
+                    <select formControlName="policyControl"  class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                     [(ngModel)]="policy.policyType">
+                        <option [value]="policyType"  *ngFor="let policyType of policyTypes">{{policyType}}</option>
+                      </select>
+                </div>
+            </form>
+
+           
+
+            <div class="row">
+                Description : <textarea class="form-control" type="text" name="desc" 
+                [(ngModel)]="policy.description"></textarea>
+            </div>
+           
+            <br/>
+            <div class="row" style="align-content: center;">
+                <button [disabled]="buttonFlag" class="regBtn btn btn-success" (click)="add()">
+                    ADD
+                  </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <button
+          class="btn btn-primary" id="ExplPlanbtn" (click)="go()">Go Back
+        </button>
+    </div>
+    
+  </div>
+  

@@ -1,0 +1,44 @@
+<div >
+   <div class="col-sm-6">
+    <div class="wrapper"> 
+        <div class="row">
+            <div class="card col-md-12 offset-md-6 shadow-lg p-3 mb-8 bg-white">
+                <h3 style="margin-top: 20px; font-size: x-large; text-align: center;">Registration</h3>
+                <div class="row">
+                    First Name : <input (blur)="validateName(); enableButton();" class="form-control" type="text" name="fname" [(ngModel)]="user.firstName" ng-pattern="/^[a-zA-Z'. -]+$/" placeholder="Your First Name">
+                    <small *ngIf="nameFlag" style="color: red;">Invalid  Name</small>
+                </div>
+                <div class="row">
+                    Last Name : <input (blur)="validateName(); enableButton();" class="form-control" type="text" name="lname" [(ngModel)]="user.lastName" ng-pattern="/^[a-zA-Z'. -]+$/" placeholder="Your Last Name">
+                    <small *ngIf="nameFlag" style="color: red;">Invalid  Name</small>
+                </div>
+                <div class="row">
+                    Password : <input class="form-control" type="password" name="password" [(ngModel)]="user.password" #password="ngModel"
+                    minlength="5" maxlength="50" required>
+                </div>
+                <div class="row">
+                    Phone No : <input (blur)="validatePhone(); enableButton();" class="form-control" type="text" name="phone" [(ngModel)]="user.phoneNo">
+                    <small *ngIf="phoneFlag" style="color: red;">Invalid Phone Number</small>
+                </div>
+                <div class="row">
+                    Email : <input (blur)="validateEmail(); enableButton();" class="form-control" type="email" name="email" [(ngModel)]="user.email">
+                    <small *ngIf="emailFlag" style="color: red;">Invalid Email</small>
+                </div>
+                <div class="row">
+                    City : <input (blur)="validateName(); enableButton();" class="form-control" type="text" name="city" [(ngModel)]="user.city" ng-pattern="/^[a-zA-Z'. -]+$/" placeholder="Your City">
+                    <small *ngIf="nameFlag" style="color: red;">Invalid  City</small>
+                </div>
+                <br/>
+                <div class="row" style="align-content: center;">
+                    <button [disabled]="buttonFlag" class="regBtn btn btn-success" (click)="signUp()">
+                        Register
+                      </button>
+                </div>
+                <div class="row mx-auto text-center">
+                    <small>Already A User ? <a href="/user-login"> Login</a></small>
+                 </div>
+            </div>
+        </div>
+      </div>
+   </div>      
+</div>

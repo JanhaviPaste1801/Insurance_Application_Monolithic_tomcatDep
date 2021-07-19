@@ -1,0 +1,66 @@
+<!-- <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2 style="text-align: center;">Available Policies</h2>
+    </div>
+    <br/>
+    <div class=" panel-body ">
+        <table border="1 " class="table table-striped  ">
+            <thead>
+                <tr>
+                    <th>Policy Id</th>
+                    <th>Policy Name</th>
+                    <th>Premium Amount</th>
+                    <th>Policy type</th>
+                    <th>Duration</th>
+                    <th>Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let policy of policies | async ">
+                    <td>{{policy.policyId}}</td>
+                    <td>{{policy.policyName}}</td>
+                    <td>{{policy.premiumAmount}}</td>
+                    <td>{{policy.policyType}}</td>
+                    <td>{{policy.duration}}</td>
+
+                    <td>
+                        <button (click)="deletePolicy(policy.policyId) " class="btn btn-danger ">Delete</button>
+                        <button (click)="updatePolicy(policy.policyId) " class="btn btn-info " style="margin-left: 10px ">Update</button>
+                        <button (click)="policyDetails(policy.policyId) " class="btn btn-info " style="margin-left: 10px ">Details</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> -->
+
+
+<section id="team" class="pb-5">
+    
+    <div class="container"><br/>
+        <div class="col-xs-12 col-sm-6 col-md-12 form-outline">
+            <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search Policy here">
+          </div>
+        <h3 class="section-title" style="text-align: center;">Recommended Plans</h3><hr/>
+        <div class="row">
+            <!--  Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let policy of (policies | filter:searchText)">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <!-- <p><img class=" img-fluid" src="assets/health-plan-for-senior-citizens.svg" alt="card image">
+                        </p> -->
+                        <h4 class="card-header bg-info">{{policy.policyName}}</h4><hr/>
+                        <p class="card-text">{{policy.policyType}}</p>
+                        <a class="btn btn-success btn-sm" (click)="policyDetails(policy.policyId)">Know More</a>
+                    </div>
+                </div><br />
+            </div>
+        </div>
+        <div class="text-center">
+            <button
+              class="btn btn-primary" id="ExplPlanbtn" (click)="go()">Go Back
+            </button>
+        </div>
+    </div>
+</section>

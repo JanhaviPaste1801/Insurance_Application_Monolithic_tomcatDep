@@ -1,0 +1,52 @@
+<div class="wrapper">
+    <br/>
+    <div class="row">
+        <div class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-white">
+            <h3 style="margin-top: 20px; font-size: x-large; text-align: center;">Update Policy Details</h3>
+            <form [formGroup]="policyForm">
+            <div class="row">
+                Policy Name : <input (blur)="validateName(); enableButton();" 
+                class="form-control" type="text" name="fname" formControlName="policyName" 
+                ng-pattern="/^[a-zA-Z'. -]+$/" >
+                <small *ngIf="nameFlag" style="color: red;">Invalid  Name</small>
+            </div>
+
+            <div class="row">
+                Duration : (in years) <input 
+                class="form-control" type="number" name="duration"  formControlName="duration" 
+                ng-pattern="/[0-9]/">
+            </div>
+
+            <div class="row">
+                Amount : <input class="form-control"  type="number" 
+                ng-pattern="/[0-9]/" name="amount"  formControlName="premiumAmount" required>
+            </div>
+
+            <form [formGroup] = "policyForm">
+                <div class="row">
+                    <label>Policy Type    :</label>
+                    <select formControlName="policyControl"  class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                    formControlName="policyType">
+                        <option [value]="policyType"  *ngFor="let policyType of policyTypes">{{policyType}}</option>
+                      </select>
+                </div>
+            </form>
+
+           
+
+            <div class="row">
+                Description : <textarea class="form-control" type="text" name="desc" 
+                formControlName="description"></textarea>
+            </div>
+           
+            <br/>
+            <div class="text-center" style="align-content: center;">
+                <button  class="regBtn btn btn-success" (click)="update()">
+                    UPDATE
+                  </button>
+            </div>
+        </form>
+        </div>
+    </div>
+  </div>
+  
